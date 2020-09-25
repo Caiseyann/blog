@@ -65,3 +65,14 @@ class Blog(db.Model):
     posted = db.Column(db.DateTime,default=datetime.utcnow)
     user_id = db.Column(db.Integer, db.ForeignKey("users.id"))
     comments = db.relationship("Comment", backref = "blog", lazy = "dynamic")
+
+
+    def delete_blog(b_id):
+        blog = Blog.query.filter_by(id = b_id).first()
+        db.session.delete(blog)
+        db.session.commit()
+
+    def get_comments(self):
+        blog = Blog.query.filter_by(id = self.id).first()
+        comments = Comment.query.filter_by(blog_id = blog.id).order_by(Comment.posted.desc())
+        return comments
