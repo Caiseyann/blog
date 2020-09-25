@@ -8,3 +8,14 @@ from datetime import datetime
 @login_manager.user_loader
 def load_user(user_id):
     return User.query.get(int(user_id))
+
+
+class Quote:
+    '''
+    Quote class to hold random quote
+    '''
+
+    def __init__(self, author, quote, permalink):
+        self.author = author
+        self.quote = quote
+        self.permalink = permalink
