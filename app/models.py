@@ -76,3 +76,24 @@ class Blog(db.Model):
         blog = Blog.query.filter_by(id = self.id).first()
         comments = Comment.query.filter_by(blog_id = blog.id).order_by(Comment.posted.desc())
         return comments
+
+
+class Comment(db.Model):
+    __tablename__ = 'comments'
+
+    id = db.Column(db.Integer, primary_key = True)
+    blog_id = db.Column(db.Integer, db.ForeignKey("blogs.id"))
+    title = db.Column(db.String(255))
+    comment = db.Column(db.String(255))
+    posted = db.Column(db.DateTime,default=datetime.utcnow)
+    user_id = db.Column(db.Integer, db.ForeignKey("users.id"))
+
+    @classmethod
+    def get_comments(cls, id):
+        comments = Comment.query.filter_by(blog_id = id).all()
+        return comments
+
+    def delete_comment(c_id):
+        comment = Comment.query.filter_by(id = c_id).first()
+        db.session.delete(comment)
+        db.session.commit()
