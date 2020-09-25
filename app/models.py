@@ -45,3 +45,11 @@ class User(UserMixin, db.Model):
 
     def __repr__(self):
         return f'User {self.username}'
+
+
+class PhotoProfile(db.Model):
+    __tablename__ = 'profile_photos'
+
+    id = db.Column(db.Integer,primary_key = True)
+    pic_path = db.Column(db.String())
+    user_id = db.Column(db.Integer,db.ForeignKey("users.id"))
