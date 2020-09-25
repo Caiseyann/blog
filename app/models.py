@@ -53,3 +53,15 @@ class PhotoProfile(db.Model):
     id = db.Column(db.Integer,primary_key = True)
     pic_path = db.Column(db.String())
     user_id = db.Column(db.Integer,db.ForeignKey("users.id"))
+
+
+class Blog(db.Model):
+    __tablename__ = 'blogs'
+
+    id = db.Column(db.Integer, primary_key = True)
+    blog_pic_path = db.Column(db.String(255))
+    title = db.Column(db.String(255))
+    message = db.Column(db.String(255))
+    posted = db.Column(db.DateTime,default=datetime.utcnow)
+    user_id = db.Column(db.Integer, db.ForeignKey("users.id"))
+    comments = db.relationship("Comment", backref = "blog", lazy = "dynamic")
