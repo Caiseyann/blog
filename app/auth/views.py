@@ -39,3 +39,10 @@ def register():
         title = "New Account"
     return render_template('auth/signup.html',  registration_form = form)
 
+
+@auth.route('/logout')
+@login_required
+def logout():
+    logout_user()
+    flash('You have been Successfully logged out')
+    return redirect(url_for("main.index"))
