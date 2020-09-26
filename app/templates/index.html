@@ -10,7 +10,7 @@
 
 {% block styles%}
     {{ super() }}
-    <link rel="stylesheet" href="{{url_for('static',filename='style.css')}}">
+    <link rel="stylesheet" href="{{url_for('static',filename='css/styles.css')}}">
    
 {% endblock %}
 
@@ -19,9 +19,9 @@
 <a href="/user/{{current_user.username}}/blog" class="btn btn-danger">Add Blog</a>
 
 {% endif %}
-<div class="contaier" style=" height : 100% background-repeat: no-repeat;background-size: cover; background-image:url(static/photos/pink.jpg)">
+<div class="contaier">
 <div class="main " >
-    <div class="container">
+    <div class="jumbotron text-center" style="background-color: #00B19E; color: #fff; padding: 100px 40px;">
         <h1 style="text-align: center" class="title">Blog</h1>
         <div class="card" style="width: 18rem;">
             </div>

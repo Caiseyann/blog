@@ -1,5 +1,5 @@
 Hello {{member.username}}
-from CEO : THE PLUGRAPHER .
+from CEO : THE BlogIt .
 
 This is to alert you that a new blog was posted today. Go check it out
 

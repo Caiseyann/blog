@@ -15,7 +15,7 @@ def index():
     View root page function that returns the index page and its data
     '''
 
-    title = 'GraphersBlog'
+    title = 'BlogIt!'
     quote = get_quote()
     comments = Comment.query.all()
     allBlogs = Blog.query.all()
