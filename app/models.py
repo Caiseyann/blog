@@ -32,7 +32,7 @@ class User(UserMixin, db.Model):
     blogs = db.relationship("Blog", backref= "user", lazy="dynamic")
     comments = db.relationship("Comment", backref= "user", lazy="dynamic")
 
-     @property
+    @property
     def password(self):
         raise AttributeError('You cannot read the password attribute')
 
