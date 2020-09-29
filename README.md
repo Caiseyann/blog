@@ -11,9 +11,11 @@ This is an application desinged to allow users to publish a blog, comment and re
 * Add/view your blog
 ## Known Bugs
 On deploying to heroku there is an error with the app (internally) 
-![Screenshot (7)](https://user-images.githubusercontent.com/67676815/94559970-adc3a080-026a-11eb-882e-ed09b05d077a.png)
+**
+![Screenshot (7)](https://user-images.githubusercontent.com/67676815/94560917-faf44200-026b-11eb-884c-1a4ab7a4eac2.png)
 However works well relatively well on live server
-![Screenshot (8)](https://user-images.githubusercontent.com/67676815/94560306-20348080-026b-11eb-84cc-ef626bfc6182.png) 
+**
+![Screenshot (7)](https://user-images.githubusercontent.com/67676815/94560917-faf44200-026b-11eb-884c-1a4ab7a4eac2.png)
 ## Technologies Used
 * Python
 * Mako
