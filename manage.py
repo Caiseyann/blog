@@ -4,7 +4,7 @@ from app.models import User, Blog, Comment, PhotoProfile
 from flask_migrate import Migrate, MigrateCommand
 from flask_wtf.csrf import CSRFProtect, CSRFError
 
-app = create_app('production')
+app = create_app('development')
 csrf = CSRFProtect(app)
 
 manager = Manager(app)
