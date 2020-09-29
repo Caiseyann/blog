@@ -24,7 +24,8 @@ However works well relatively well on live server
 * CSS/Bootstrap
 ### To visit the app click on this link below(although not functioning)
 https://theblogitapp.herokuapp.com/
-####BDD
+
+#### BDD
 * Given > A user wants to write a blog/ comment to a blog
 * When  > user logs in 
 * Then > user can write and publish blogs in the site
