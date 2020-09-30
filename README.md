@@ -10,11 +10,7 @@ This is an application desinged to allow users to publish a blog, comment and re
 * login
 * Add/view your blog
 ## Known Bugs
-On deploying to heroku there is an error with the app (internally) 
-![Screenshot (7)](https://user-images.githubusercontent.com/67676815/94560917-faf44200-026b-11eb-884c-1a4ab7a4eac2.png)
-However works well relatively well on live server
-![Screenshot (8)](https://user-images.githubusercontent.com/67676815/94560968-0cd5e500-026c-11eb-89fa-f6112b589468.png)
-
+No known bugs
 ## Technologies Used
 * Python
 * Mako
@@ -22,9 +18,8 @@ However works well relatively well on live server
 * JavaScript
 * PowerShell
 * CSS/Bootstrap
-### To visit the app click on this link below(although not functioning)
+### To visit the app click on this link below
 https://theblogitapp.herokuapp.com/
-
 #### BDD
 * Given > A user wants to write a blog/ comment to a blog
 * When  > user logs in 
